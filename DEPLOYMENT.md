@@ -9,7 +9,7 @@ A modern, responsive portfolio website built with React, featuring admin dashboa
 1. **Environment Variables Setup**
    ```bash
    # In Vercel Dashboard -> Project Settings -> Environment Variables
-   REACT_APP_API_URL=https://your-backend-api-url.com
+   VITE_API_URL=https://your-backend-api-url.com
    ```
 
 2. **Deploy to Vercel**
@@ -26,7 +26,7 @@ A modern, responsive portfolio website built with React, featuring admin dashboa
 1. **Environment Variables**
    ```bash
    # In Netlify Dashboard -> Site Settings -> Build & Deploy -> Environment
-   REACT_APP_API_URL=https://your-backend-api-url.com
+   VITE_API_URL=https://your-backend-api-url.com
    ```
 
 2. **Build Settings**
@@ -64,6 +64,7 @@ A modern, responsive portfolio website built with React, featuring admin dashboa
    ```bash
    cp .env.example .env
    # Edit .env with your local API URL
+   # For local development: VITE_API_URL=http://localhost:5000
    ```
 
 3. **Start Development**
@@ -116,7 +117,7 @@ frontend/
 
 ### Login Issues
 1. Check if backend API is running
-2. Verify `REACT_APP_API_URL` environment variable
+2. Verify `VITE_API_URL` environment variable
 3. Check CORS settings on backend
 4. Ensure admin credentials exist in database
 
@@ -151,4 +152,4 @@ This project is licensed under the MIT License.
 
 ---
 
-**Note**: Make sure your backend API is deployed and accessible before deploying the frontend. Update the `REACT_APP_API_URL` environment variable with your production API URL.
+**Note**: Make sure your backend API is deployed and accessible before deploying the frontend. Update the `VITE_API_URL` environment variable with your production API URL.
