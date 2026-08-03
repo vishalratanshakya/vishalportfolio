@@ -71,7 +71,6 @@ export default function Footer() {
 
       <div className="mx-auto mt-8 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 Vishal Ratan Shakya</p>
-        <p>Crafted with React, Next.js, Tailwind CSS, and Framer Motion.</p>
       </div>
     </footer>
   );
