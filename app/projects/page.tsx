@@ -72,7 +72,7 @@ export default function ProjectsPage() {
 
                 {/* Tech Stack List */}
                 <div className="flex flex-wrap gap-2 mt-4">
-                  {project.technologies.slice(0, 5).map((tech) => (
+                  {project.technologies.slice(0, 8).map((tech) => (
                     <span
                       key={tech}
                       className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-zinc-300"

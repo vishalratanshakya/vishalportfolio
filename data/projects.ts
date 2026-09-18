@@ -27,11 +27,11 @@ export const PROJECTS: Project[] = [
     category: 'On-Demand Services Platform',
     tagline: 'Connecting users with verified service professionals seamlessly',
     heroImage: '/images/projects/homecraft-services/hero.jpg',
-    technologies: ['Flutter', 'Dart', 'Firebase', 'Cashfree', 'Next.js', 'React.js', 'Node.js', 'MongoDB'],
+    technologies: ['React.js', 'Next.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Cashfree'],
     website: 'https://home-craft-services.vercel.app/',
     github: 'https://github.com/vishalratanshakya',
     description: 'Home Craft Services is an all-in-one on-demand service booking marketplace connecting clients with service partners across home care, repairs, and beauty.',
-    longDescription: 'Home Craft Services is an on-demand services platform designed to streamline service booking workflows across mobile and web. Built with Flutter and Dart for cross-platform apps, alongside a Next.js and Node.js web admin portal, Home Craft Services handles user service discovery, real-time partner dispatching, date/slot selection, automated payment integration via Cashfree, and real-time push notifications powered by Firebase.',
+    longDescription: 'Home Craft Services is an on-demand services web platform designed to streamline service booking workflows. Built with Next.js, Node.js, and MongoDB, Home Craft Services handles user service discovery, real-time partner dispatching, date/slot selection, automated payment integration via Cashfree, and real-time updates.',
     features: [
       'Multi-panel ecosystem (User, Service Partner, and Admin)',
       'Smart service discovery with keyword search and category filtering',
@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
       'Real-time booking updates and push notifications',
       'Partner onboarding, approval, and dispatch workflows'
     ],
-    role: 'Full Stack & Mobile Lead Developer',
+    role: 'Full Stack Developer',
     year: '2026',
     stats: [
       { label: 'Platform Architecture', value: '3 Panels' },
