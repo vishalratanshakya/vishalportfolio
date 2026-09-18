@@ -8,7 +8,7 @@ import { ArrowUpRight, ExternalLink, Filter } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Projects & Case Studies — Vishal Ratan Shakya',
   description:
-    'Explore 7 real full-stack web applications and cross-platform mobile apps engineered by Vishal Ratan Shakya, including Nexora, TalentSpark, Rydo, SUJATA Fine Jewels, HomeNest, Blinkit App, and 360 Payz.',
+    'Explore 7 real full-stack web applications and cross-platform mobile apps engineered by Vishal Ratan Shakya, including Home Craft Services, TalentSpark, Rydo, SUJATA Fine Jewels, HomeNest, Blinkit App, and 360 Payz.',
 };
 
 export default function ProjectsPage() {

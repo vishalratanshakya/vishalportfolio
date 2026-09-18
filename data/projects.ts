@@ -20,18 +20,18 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    id: 'nexora',
-    slug: 'nexora',
+    id: 'homecraft-services',
+    slug: 'homecraft-services',
     number: '01',
-    title: 'Nexora',
+    title: 'Home Craft Services',
     category: 'On-Demand Services Platform',
     tagline: 'Connecting users with verified service professionals seamlessly',
-    heroImage: '/images/projects/nexora/hero.jpg',
+    heroImage: '/images/projects/homecraft-services/hero.jpg',
     technologies: ['Flutter', 'Dart', 'Firebase', 'Cashfree', 'Next.js', 'React.js', 'Node.js', 'MongoDB'],
-    website: 'https://meganods-nexora.vercel.app/',
+    website: 'https://home-craft-services.vercel.app/',
     github: 'https://github.com/vishalratanshakya',
-    description: 'Nexora is an all-in-one on-demand service booking marketplace connecting clients with service partners across home care, repairs, and beauty.',
-    longDescription: 'Nexora is an on-demand services platform designed to streamline service booking workflows across mobile and web. Built with Flutter and Dart for cross-platform apps, alongside a Next.js and Node.js web admin portal, Nexora handles user service discovery, real-time partner dispatching, date/slot selection, automated payment integration via Cashfree, and real-time push notifications powered by Firebase.',
+    description: 'Home Craft Services is an all-in-one on-demand service booking marketplace connecting clients with service partners across home care, repairs, and beauty.',
+    longDescription: 'Home Craft Services is an on-demand services platform designed to streamline service booking workflows across mobile and web. Built with Flutter and Dart for cross-platform apps, alongside a Next.js and Node.js web admin portal, Home Craft Services handles user service discovery, real-time partner dispatching, date/slot selection, automated payment integration via Cashfree, and real-time push notifications powered by Firebase.',
     features: [
       'Multi-panel ecosystem (User, Service Partner, and Admin)',
       'Smart service discovery with keyword search and category filtering',
@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
       { label: 'Payment Gateway', value: 'Cashfree' }
     ],
     screenshots: [
-      '/images/projects/nexora/hero.jpg'
+      '/images/projects/homecraft-services/hero.jpg'
     ]
   },
   {
@@ -120,7 +120,7 @@ export const PROJECTS: Project[] = [
     tagline: 'High-end digital boutique for handcrafted fine jewelry',
     heroImage: '/images/projects/sujata/hero.jpg',
     technologies: ['TypeScript', 'Next.js', 'React.js', 'MongoDB', 'Tailwind CSS'],
-    website: 'https://sujatafinejewels.com',
+    website: 'https://sujata-fine-jewels.vercel.app/',
     github: 'https://github.com/vishalratanshakya',
     description: 'A luxury e-commerce experience crafted with high-precision typography, interactive product views, and sleek dark bronze aesthetic.',
     longDescription: 'SUJATA Fine Jewels redefines online luxury shopping with an editorial design philosophy. Designed using Next.js and TypeScript, the site features fluid micro-interactions, high-resolution jewelry collection showcases, bespoke order requests, and an immersive dark luxury aesthetic.',
