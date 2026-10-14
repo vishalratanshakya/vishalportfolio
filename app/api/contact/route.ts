@@ -41,7 +41,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // Forward to Web3Forms API server-side
+    // Forward to Web3Forms API
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: {
@@ -60,7 +60,20 @@ export async function POST(request: Request) {
       }),
     });
 
-    const data = await response.json();
+    const rawText = await response.text();
+    let data;
+    try {
+      data = JSON.parse(rawText);
+    } catch {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            'Unable to process email delivery with upstream service. Please reach out directly at vishalratanshakya@gmail.com.',
+        },
+        { status: 502 }
+      );
+    }
 
     if (response.ok && data.success) {
       return NextResponse.json({ success: true, message: data.message || 'Email delivered successfully.' });

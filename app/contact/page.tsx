@@ -31,7 +31,15 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
+      let result;
+      try {
+        result = await response.json();
+      } catch {
+        result = {
+          success: false,
+          error: 'Email delivery encountered an unexpected response. Please contact me directly at vishalratanshakya@gmail.com.',
+        };
+      }
 
       if (response.ok && result.success) {
         setSubmitted(true);
