@@ -11,7 +11,7 @@ export const TimelinePreview: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Section Heading & Intro */}
-          <div className="lg:col-span-5 sticky top-32">
+          <div className="lg:col-span-5 lg:sticky lg:top-32">
             <span className="text-xs font-mono tracking-widest text-sky-400 uppercase">
               Career Journey
             </span>

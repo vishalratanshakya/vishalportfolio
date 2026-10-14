@@ -64,48 +64,48 @@ export const CapabilitiesGrid: React.FC = () => {
               {/* Badges Grid */}
               <div className="grid grid-cols-2 gap-3 mt-8">
                 {/* JavaScript */}
-                <div className="p-3.5 rounded-2xl bg-[#131824]/90 border border-white/10 flex items-center gap-3">
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#131824]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-amber-400 text-black font-extrabold text-xs flex items-center justify-center shrink-0">
                     JS
                   </div>
-                  <div>
-                    <span className="text-xs font-bold text-white block leading-tight">JavaScript</span>
-                    <span className="text-[10px] font-mono text-zinc-400">(ES6+)</span>
+                  <div className="min-w-0">
+                    <span className="text-xs font-bold text-white block leading-tight truncate">JavaScript</span>
+                    <span className="text-[10px] font-mono text-zinc-400 block leading-tight">(ES6+)</span>
                   </div>
                 </div>
 
                 {/* TypeScript */}
-                <div className="p-3.5 rounded-2xl bg-[#131824]/90 border border-white/10 flex items-center gap-3">
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#131824]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-sky-500 text-white font-extrabold text-xs flex items-center justify-center shrink-0">
                     TS
                   </div>
-                  <span className="text-xs font-bold text-white">TypeScript</span>
+                  <span className="text-xs font-bold text-white truncate">TypeScript</span>
                 </div>
 
                 {/* Dart */}
-                <div className="p-3.5 rounded-2xl bg-[#131824]/90 border border-white/10 flex items-center gap-3">
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#131824]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 p-[1px] shrink-0">
                     <div className="w-full h-full bg-[#0d111a] rounded-[11px] flex items-center justify-center text-cyan-400 text-xs font-black">
                       ❖
                     </div>
                   </div>
-                  <span className="text-xs font-bold text-white">Dart</span>
+                  <span className="text-xs font-bold text-white truncate">Dart</span>
                 </div>
 
                 {/* Java */}
-                <div className="p-3.5 rounded-2xl bg-[#131824]/90 border border-white/10 flex items-center gap-3">
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#131824]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-red-500/20 border border-red-500/40 text-red-400 font-extrabold text-xs flex items-center justify-center shrink-0">
                     ☕
                   </div>
-                  <span className="text-xs font-bold text-white">Java</span>
+                  <span className="text-xs font-bold text-white truncate">Java</span>
                 </div>
 
                 {/* HTML5 & CSS3 */}
-                <div className="col-span-2 p-3.5 rounded-2xl bg-[#131824]/90 border border-white/10 flex items-center gap-3">
+                <div className="col-span-2 p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#131824]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-gradient-to-r from-orange-500 to-blue-500 text-white font-black text-xs flex items-center justify-center shrink-0">
                     53
                   </div>
-                  <span className="text-xs font-bold text-white">HTML5 & CSS3</span>
+                  <span className="text-xs font-bold text-white truncate">HTML5 & CSS3</span>
                 </div>
               </div>
             </div>
@@ -140,54 +140,54 @@ export const CapabilitiesGrid: React.FC = () => {
               {/* Badges Grid */}
               <div className="grid grid-cols-2 gap-3 mt-8">
                 {/* React.js */}
-                <div className="p-3.5 rounded-2xl bg-[#19142b]/90 border border-white/10 flex items-center gap-3">
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#19142b]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-cyan-500/20 text-cyan-400 text-sm flex items-center justify-center font-bold shrink-0">
                     ⚛
                   </div>
-                  <span className="text-xs font-bold text-white">React.js</span>
+                  <span className="text-xs font-bold text-white truncate">React.js</span>
                 </div>
 
                 {/* Next.js */}
-                <div className="p-3.5 rounded-2xl bg-[#19142b]/90 border border-white/10 flex items-center gap-3">
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#19142b]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-white text-black font-black text-xs flex items-center justify-center shrink-0">
                     N
                   </div>
-                  <div>
-                    <span className="text-xs font-bold text-white block leading-tight">Next.js</span>
-                    <span className="text-[10px] font-mono text-zinc-400">(App Router)</span>
+                  <div className="min-w-0">
+                    <span className="text-xs font-bold text-white block leading-tight truncate">Next.js</span>
+                    <span className="text-[10px] font-mono text-zinc-400 block leading-tight">(App Router)</span>
                   </div>
                 </div>
 
                 {/* Node.js */}
-                <div className="p-3.5 rounded-2xl bg-[#19142b]/90 border border-white/10 flex items-center gap-3">
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#19142b]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 font-bold text-xs flex items-center justify-center shrink-0">
                     JS
                   </div>
-                  <span className="text-xs font-bold text-white">Node.js</span>
+                  <span className="text-xs font-bold text-white truncate">Node.js</span>
                 </div>
 
                 {/* Express.js */}
-                <div className="p-3.5 rounded-2xl bg-[#19142b]/90 border border-white/10 flex items-center gap-3">
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#19142b]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-zinc-800 text-white font-mono text-xs flex items-center justify-center shrink-0">
                     ex
                   </div>
-                  <span className="text-xs font-bold text-white">Express.js</span>
+                  <span className="text-xs font-bold text-white truncate">Express.js</span>
                 </div>
 
                 {/* Flutter */}
-                <div className="p-3.5 rounded-2xl bg-[#19142b]/90 border border-white/10 flex items-center gap-3">
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#19142b]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-sky-500/20 text-sky-400 font-black text-xs flex items-center justify-center shrink-0">
                     F
                   </div>
-                  <span className="text-xs font-bold text-white">Flutter</span>
+                  <span className="text-xs font-bold text-white truncate">Flutter</span>
                 </div>
 
                 {/* Tailwind CSS */}
-                <div className="p-3.5 rounded-2xl bg-[#19142b]/90 border border-white/10 flex items-center gap-3">
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#19142b]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-cyan-400/20 text-cyan-300 font-black text-xs flex items-center justify-center shrink-0">
                     ≈
                   </div>
-                  <span className="text-xs font-bold text-white">Tailwind CSS</span>
+                  <span className="text-xs font-bold text-white truncate">Tailwind CSS</span>
                 </div>
               </div>
             </div>
