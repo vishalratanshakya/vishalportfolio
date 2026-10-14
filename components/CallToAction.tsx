@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowUpRight, Mail, Phone, MapPin, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Mail, Sparkles } from 'lucide-react';
 
 export const CallToAction: React.FC = () => {
   return (
@@ -30,7 +30,7 @@ export const CallToAction: React.FC = () => {
               href="/contact"
               className="px-8 py-4 rounded-full bg-sky-400 text-black font-semibold text-sm hover:bg-white transition-all shadow-xl shadow-sky-500/20 flex items-center gap-2 group"
             >
-              <span>Let's Work Together</span>
+              <span>Let&apos;s Work Together</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
 

@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
 
             {/* Professional Statement */}
             <p className="text-zinc-300 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-10">
-              "I build modern web and mobile applications with clean code, thoughtful interfaces and seamless user experiences."
+              &ldquo;I build modern web and mobile applications with clean code, thoughtful interfaces and seamless user experiences.&rdquo;
             </p>
 
             {/* Action Buttons */}

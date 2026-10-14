@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { EXPERIENCES, EDUCATIONS } from '@/data/experience';
-import { Briefcase, GraduationCap, MapPin, Calendar, ArrowUpRight } from 'lucide-react';
+import { EXPERIENCES } from '@/data/experience';
+import { GraduationCap, MapPin, Calendar, ArrowUpRight } from 'lucide-react';
 
 export const TimelinePreview: React.FC = () => {
   return (
@@ -35,7 +35,7 @@ export const TimelinePreview: React.FC = () => {
 
           {/* Timeline Nodes */}
           <div className="lg:col-span-7 flex flex-col gap-8">
-            {EXPERIENCES.map((exp, idx) => (
+            {EXPERIENCES.map((exp) => (
               <div
                 key={exp.id}
                 className="glass-panel p-8 rounded-2xl border border-white/10 relative hover:border-sky-500/30 transition-colors group"

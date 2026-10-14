@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { EXPERIENCES, EDUCATIONS, CERTIFICATIONS } from '@/data/experience';
-import { Calendar, MapPin, Briefcase, CheckCircle2, Award, GraduationCap, Download } from 'lucide-react';
+import { EXPERIENCES } from '@/data/experience';
+import { Calendar, CheckCircle2, Download } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Work Experience & History — Vishal Ratan Shakya',
@@ -31,7 +31,7 @@ export default function ExperiencePage() {
 
         {/* Timeline Layout */}
         <div className="space-y-16 mb-24">
-          {EXPERIENCES.map((exp, idx) => (
+          {EXPERIENCES.map((exp) => (
             <div
               key={exp.id}
               className="glass-panel p-8 sm:p-12 rounded-3xl border border-white/10 hover:border-sky-500/30 transition-all relative overflow-hidden group"

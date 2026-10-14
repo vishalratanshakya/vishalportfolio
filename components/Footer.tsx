@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-6 flex flex-col justify-between">
             <div>
               <span className="text-xs font-mono tracking-widest text-sky-400 uppercase">
-                Let's Build Something Exceptional
+                Let&apos;s Build Something Exceptional
               </span>
               <h2 className="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight mt-4 leading-tight">
                 Ready to bring your next product vision to life?

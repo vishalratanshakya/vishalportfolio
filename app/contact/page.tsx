@@ -1,33 +1,52 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle2, Sparkles } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '@/components/Icons';
-import confetti from 'canvas-confetti';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    subject: '',
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
+    if (loading) return;
 
-    // Frontend interaction simulation
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
+    setLoading(true);
+    setErrorMessage(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    }, 800);
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMessage(
+          result.error ||
+            'Failed to send message. Please try again or reach out directly at vishalratanshakya@gmail.com.'
+        );
+      }
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Network connection error';
+      setErrorMessage(`${msg}. You can reach me directly at vishalratanshakya@gmail.com.`);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -42,10 +61,10 @@ export default function ContactPage() {
             Get In Touch
           </span>
           <h1 className="text-4xl sm:text-6xl font-display font-extrabold text-white tracking-tight mt-3">
-            Let's Work Together
+            Let&apos;s Work Together
           </h1>
           <p className="text-zinc-400 text-lg sm:text-xl font-light mt-4 leading-relaxed">
-            Have a project in mind, a full-time engineering opportunity, or want to discuss technical ideas? I'd love to hear from you.
+            Have a project in mind, a full-time engineering opportunity, or want to discuss technical ideas? I&apos;d love to hear from you.
           </p>
         </div>
 
@@ -133,14 +152,14 @@ export default function ContactPage() {
                   <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-2xl font-display font-bold text-white">Message Sent Successfully!</h3>
+                  <h3 className="text-2xl font-display font-bold text-white">Message Delivered Successfully!</h3>
                   <p className="text-zinc-400 text-sm max-w-md mx-auto">
-                    Thank you for reaching out, Vishal Ratan Shakya will get back to you shortly at {formData.email}.
+                    Thank you for reaching out! Your message has been sent directly to Vishal Ratan Shakya&apos;s inbox at vishalratanshakya@gmail.com.
                   </p>
                   <button
                     onClick={() => {
                       setSubmitted(false);
-                      setFormData({ name: '', email: '', message: '' });
+                      setFormData({ name: '', email: '', subject: '', message: '' });
                     }}
                     className="mt-6 px-6 py-2.5 rounded-full bg-white/10 text-xs font-mono text-white hover:bg-white/20 transition-colors"
                   >
@@ -149,11 +168,24 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <h2 className="text-2xl font-display font-bold text-white mb-2">Send a Message</h2>
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-2xl font-display font-bold text-white">Send a Message</h2>
+                    <span className="text-xs font-mono text-zinc-500">Auto-Delivered to Inbox</span>
+                  </div>
+
+                  {errorMessage && (
+                    <div className="p-4 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-start gap-3 text-red-300 text-xs font-mono">
+                      <AlertCircle className="w-5 h-5 shrink-0 text-red-400" />
+                      <div>
+                        <strong className="block font-bold text-red-200 mb-0.5">Delivery Notice</strong>
+                        <span>{errorMessage}</span>
+                      </div>
+                    </div>
+                  )}
 
                   <div>
                     <label htmlFor="name" className="block text-xs font-mono text-zinc-400 uppercase mb-2">
-                      Your Full Name
+                      Your Full Name <span className="text-sky-400">*</span>
                     </label>
                     <input
                       type="text"
@@ -162,13 +194,14 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. John Doe"
-                      className="w-full px-5 py-4 rounded-xl bg-surface-100 border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-sky-400 text-sm transition-colors"
+                      disabled={loading}
+                      className="w-full px-5 py-4 rounded-xl bg-surface-100 border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-sky-400 text-sm transition-colors disabled:opacity-50"
                     />
                   </div>
 
                   <div>
                     <label htmlFor="email" className="block text-xs font-mono text-zinc-400 uppercase mb-2">
-                      Your Email Address
+                      Your Email Address <span className="text-sky-400">*</span>
                     </label>
                     <input
                       type="email"
@@ -177,13 +210,29 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. john@example.com"
-                      className="w-full px-5 py-4 rounded-xl bg-surface-100 border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-sky-400 text-sm transition-colors"
+                      disabled={loading}
+                      className="w-full px-5 py-4 rounded-xl bg-surface-100 border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-sky-400 text-sm transition-colors disabled:opacity-50"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="subject" className="block text-xs font-mono text-zinc-400 uppercase mb-2">
+                      Subject / Topic
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      placeholder="e.g. Full Stack Engineering Role / Project Inquiry"
+                      disabled={loading}
+                      className="w-full px-5 py-4 rounded-xl bg-surface-100 border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-sky-400 text-sm transition-colors disabled:opacity-50"
                     />
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-xs font-mono text-zinc-400 uppercase mb-2">
-                      Project Details or Inquiry
+                      Project Details or Inquiry <span className="text-sky-400">*</span>
                     </label>
                     <textarea
                       id="message"
@@ -192,20 +241,24 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell me about your project, timeline, or engineering role..."
-                      className="w-full px-5 py-4 rounded-xl bg-surface-100 border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-sky-400 text-sm transition-colors resize-none"
+                      disabled={loading}
+                      className="w-full px-5 py-4 rounded-xl bg-surface-100 border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-sky-400 text-sm transition-colors resize-none disabled:opacity-50"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-4 rounded-full bg-sky-400 text-black font-semibold text-sm hover:bg-white transition-all shadow-xl shadow-sky-500/20 flex items-center justify-center gap-2 group disabled:opacity-50"
+                    className="w-full py-4 rounded-full bg-sky-400 text-black font-semibold text-sm hover:bg-white transition-all shadow-xl shadow-sky-500/20 flex items-center justify-center gap-2 group disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
                   >
                     {loading ? (
-                      <span>Sending Message...</span>
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        <span>Delivering Message...</span>
+                      </>
                     ) : (
                       <>
-                        <span>Send Message</span>
+                        <span>Send Message Directly</span>
                         <Send className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                       </>
                     )}

@@ -17,7 +17,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vishalshakya.dev"),
+  metadataBase: new URL("https://vishalratanportfolio.vercel.app"),
   title: "Vishal Ratan Shakya — Full Stack Developer",
   description:
     "Production-quality personal portfolio of Vishal Ratan Shakya. Full-stack software developer experienced in React.js, Next.js, Node.js, Express.js, TypeScript, Flutter, Dart, and MongoDB.",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Vishal Ratan Shakya — Full Stack Developer Portfolio",
     description:
       "I build modern web and mobile applications with clean code, thoughtful interfaces and seamless user experiences.",
-    url: "https://vishalshakya.dev",
+    url: "https://vishalratanportfolio.vercel.app",
     siteName: "Vishal Ratan Shakya Portfolio",
     locale: "en_US",
     type: "website",

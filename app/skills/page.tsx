@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { SKILL_CATEGORIES } from '@/data/skills';
-import { Code2, Layers, Database, CreditCard, Wrench, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Code2, Layers, Database, CreditCard, Wrench } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Skills & Tech Stack — Vishal Ratan Shakya',

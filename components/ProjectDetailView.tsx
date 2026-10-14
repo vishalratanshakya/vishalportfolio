@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { PROJECTS } from '@/data/projects';
-import { ArrowLeft, ArrowUpRight, ExternalLink, CheckCircle2, Layers, Calendar, User, Sparkles } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, ExternalLink, CheckCircle2, Layers, Sparkles } from 'lucide-react';
 import { GithubIcon } from '@/components/Icons';
 
 interface CaseStudyProps {
@@ -77,6 +77,12 @@ export function ProjectDetailView({ slug }: CaseStudyProps) {
                 <span>Visit Live Application</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
+            )}
+
+            {project.liveStatus === 'temporarily-unavailable' && (
+              <div className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 font-mono text-xs uppercase tracking-wider">
+                <span>Live Demo Temporarily Unavailable</span>
+              </div>
             )}
 
             {project.github && (

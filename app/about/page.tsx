@@ -1,9 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Metadata } from 'next';
-import { Download, Mail, Phone, MapPin, Code2, Sparkles, GraduationCap, Award } from 'lucide-react';
-import { EXPERIENCES, EDUCATIONS, CERTIFICATIONS } from '@/data/experience';
+import { Download, Code2, Sparkles, GraduationCap } from 'lucide-react';
+import { EDUCATIONS, CERTIFICATIONS } from '@/data/experience';
 
 export const metadata: Metadata = {
   title: 'About Me — Vishal Ratan Shakya',

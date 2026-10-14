@@ -3,12 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { PROJECTS } from '@/data/projects';
-import { ArrowUpRight, ExternalLink, Filter } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Projects & Case Studies — Vishal Ratan Shakya',
   description:
-    'Explore 7 real full-stack web applications and cross-platform mobile apps engineered by Vishal Ratan Shakya, including Home Craft Services, TalentSpark, Rydo, SUJATA Fine Jewels, HomeNest, Blinkit App, and 360 Payz.',
+    `Explore ${PROJECTS.length} production web applications and cross-platform mobile apps engineered by Vishal Ratan Shakya.`,
 };
 
 export default function ProjectsPage() {
@@ -21,7 +21,7 @@ export default function ProjectsPage() {
         {/* Header */}
         <div className="max-w-3xl mb-16">
           <span className="text-xs font-mono tracking-widest text-sky-400 uppercase">
-            Portfolio Showcase (7 Case Studies)
+            Portfolio Showcase ({PROJECTS.length} Case Studies)
           </span>
           <h1 className="text-4xl sm:text-6xl font-display font-extrabold text-white tracking-tight mt-3">
             Featured Projects
@@ -95,6 +95,12 @@ export default function ProjectsPage() {
                     <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                     <span>Live Demo</span>
                   </a>
+                )}
+
+                {project.liveStatus === 'temporarily-unavailable' && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 font-mono text-[11px]">
+                    Demo Unavailable
+                  </span>
                 )}
 
                 <Link

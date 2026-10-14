@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowUpRight, Download, Code2 } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Download } from 'lucide-react';
 
 const NAV_LINKS = [
   { name: 'Home', href: '/' },
@@ -28,11 +28,6 @@ export const Navigation: React.FC = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [pathname]);
 
   return (
     <>
@@ -141,6 +136,7 @@ export const Navigation: React.FC = () => {
                   >
                     <Link
                       href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
                       className={`flex items-center justify-between text-2xl font-display font-semibold transition-all ${
                         isActive ? 'text-sky-400 pl-2 border-l-2 border-sky-400' : 'text-zinc-300 hover:text-white'
                       }`}

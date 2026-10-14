@@ -8,6 +8,7 @@ export interface Project {
   heroImage: string;
   technologies: string[];
   website?: string;
+  liveStatus?: 'active' | 'temporarily-unavailable' | 'repo-only';
   github?: string;
   description: string;
   longDescription: string;
@@ -60,10 +61,10 @@ export const PROJECTS: Project[] = [
     tagline: 'A modern multi-vendor marketplace connecting creators and buyers',
     heroImage: '/images/projects/talentspark/hero.jpg',
     technologies: ['React.js', 'Next.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
-    website: 'https://telentspark-black.vercel.app/',
+    liveStatus: 'temporarily-unavailable',
     github: 'https://github.com/vishalratanshakya',
-    description: 'A robust multi-vendor e-commerce platform with vendor dashboards, product catalogs, shopping carts, and order fulfillment workflows.',
-    longDescription: 'TalentSpark enables multiple independent vendors to set up shop, list products, track orders, and manage inventory within a unified web ecosystem. Built with Next.js and Node.js/Express, the platform provides ultra-fast product browsing, responsive cart checkout, secure JWT authentication, and structured MongoDB data modeling.',
+    description: 'A multi-vendor e-commerce platform featuring independent vendor stores, dynamic product catalogs, shopping carts, and order fulfillment workflows.',
+    longDescription: 'TalentSpark allows multiple independent vendors to set up shop, list products, track orders, and manage inventory within a unified web ecosystem. Built with Next.js and Node.js/Express, the platform provides product browsing, responsive cart checkout, secure JWT authentication, and structured MongoDB data modeling.',
     features: [
       'Multi-vendor storefront and dashboard creation',
       'Dynamic product listing with rich media uploading',
@@ -75,7 +76,7 @@ export const PROJECTS: Project[] = [
     year: '2025',
     stats: [
       { label: 'Architecture', value: 'MERN Stack' },
-      { label: 'UI Speed', value: '100 Core Web Vitals' },
+      { label: 'Frontend', value: 'Next.js App Router' },
       { label: 'Vendor Portal', value: 'Integrated' }
     ],
     screenshots: [
@@ -88,24 +89,24 @@ export const PROJECTS: Project[] = [
     number: '03',
     title: 'Rydo',
     category: 'Ride Booking & Driver Management App',
-    tagline: 'Real-time urban mobility and driver dispatch platform',
+    tagline: 'Real-time urban mobility and driver dispatch platform concept',
     heroImage: '/images/projects/rydo/hero.jpg',
     technologies: ['Flutter', 'Dart', 'MongoDB', 'Node.js', 'Express.js'],
     github: 'https://github.com/vishalratanshakya',
-    description: 'A mobile ride-booking application designed around modern ride-hailing workflows, live location updates, and driver management.',
-    longDescription: 'Rydo is an original ride-hailing mobile application focused on high-performance geolocation interactions, instant fare calculation, driver availability management, and smooth customer booking loops. Engineered with Flutter and Dart for high FPS smooth rendering across iOS and Android.',
+    description: 'A mobile ride-booking application designed around ride-hailing workflows, location updates, and driver management interfaces.',
+    longDescription: 'Rydo is an original ride-hailing mobile application prototype focused on location interactions, fare estimation, driver availability management, and customer booking loops. Engineered with Flutter and Dart for cross-platform rendering across iOS and Android.',
     features: [
-      'Real-time passenger ride booking and destination selection',
+      'Passenger ride booking and destination selection UI',
       'Driver interface for ride requests, acceptance, and trip status',
       'Location-based fare estimation and map routing interface',
-      'Ride status tracking with arrival time calculations'
+      'Ride status tracking with estimated arrival calculations'
     ],
     role: 'Mobile App Developer',
     year: '2025',
     stats: [
       { label: 'Framework', value: 'Flutter / Dart' },
       { label: 'Target Platforms', value: 'iOS & Android' },
-      { label: 'Latency', value: '< 100ms API Response' }
+      { label: 'Architecture', value: 'REST + Node.js' }
     ],
     screenshots: [
       '/images/projects/rydo/hero.jpg'
@@ -177,22 +178,22 @@ export const PROJECTS: Project[] = [
     category: 'Payment App Client Website',
     tagline: 'Client-facing marketing & documentation web platform for fintech payment system',
     heroImage: '/images/projects/360-payz/hero.jpg',
-    technologies: ['Client Website'],
+    technologies: ['React.js', 'Next.js', 'Tailwind CSS', 'Client Web Platform'],
     website: 'https://360payz.com',
     github: 'https://github.com/vishalratanshakya',
-    description: 'A high-converting client website for a payment technology application highlighting transaction security, API integration, and features.',
-    longDescription: 'Created as a client-facing web application for 360 Payz, this platform presents financial transaction features, developer integration guides, merchant solution tiers, and compliance certifications with sharp typography and corporate fintech aesthetics.',
+    description: 'A client-facing web platform for a payment technology application highlighting transaction capabilities, API integration guides, and merchant solutions.',
+    longDescription: 'Created as a client-facing web application for 360 Payz, this platform presents financial transaction features, developer integration guides, merchant solution tiers, and compliance specifications with responsive typography and corporate fintech aesthetics.',
     features: [
       'Fintech product capability landing pages',
       'Developer API reference and gateway integration portal',
-      'High-security compliance & PCI-DSS overview section'
+      'Client security and compliance overview presentations'
     ],
     role: 'Frontend Web Developer',
     year: '2025',
     stats: [
       { label: 'Type', value: 'Client Web Platform' },
-      { label: 'Focus', value: 'Fintech Marketing' },
-      { label: 'Security Visuals', value: 'Enterprise Grade' }
+      { label: 'Stack', value: 'Next.js + Tailwind CSS' },
+      { label: 'Focus', value: 'Fintech UI Presentation' }
     ],
     screenshots: [
       '/images/projects/360-payz/hero.jpg'
@@ -301,10 +302,10 @@ export const PROJECTS: Project[] = [
     tagline: 'Modern property discovery and real-estate management app',
     heroImage: '/images/projects/homenest/hero.jpg',
     technologies: ['React.js', 'Next.js', 'Node.js', 'Express.js', 'Firebase', 'Tailwind CSS'],
-    website: 'https://homenest-realestate.vercel.app',
+    liveStatus: 'repo-only',
     github: 'https://github.com/vishalratanshakya',
-    description: 'A comprehensive real-estate platform for discovering properties, managing listings, and filtering by location, price, and amenities.',
-    longDescription: 'HomeNest streamlines real estate search through intuitive filtering, interactive map visualization, detailed property specifications, and Firebase user authentication. Developed with Next.js and Tailwind CSS, it offers buyers and renters a clean digital portal for discovering their next home.',
+    description: 'A real-estate web application for discovering properties, managing listings, and filtering by location, price, and amenities.',
+    longDescription: 'HomeNest streamlines real estate search through intuitive property filtering, detailed specifications, and Firebase user authentication. Developed with Next.js and Tailwind CSS, it offers a clean digital portal for discovering home listings.',
     features: [
       'Interactive property listing feed with high-res galleries',
       'Multi-parameter search: location, price range, property type',

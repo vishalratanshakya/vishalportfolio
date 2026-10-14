@@ -1,4 +1,3 @@
-'use me';
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -9,14 +8,15 @@ export const CustomCursor: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [isTouch, setIsTouch] = useState(false);
+  const [isTouch] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    }
+    return false;
+  });
 
   useEffect(() => {
-    // Detect touch device
-    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-      setIsTouch(true);
-      return;
-    }
+    if (isTouch) return;
 
     const onMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
@@ -59,7 +59,7 @@ export const CustomCursor: React.FC = () => {
       document.removeEventListener('mouseenter', onMouseEnter);
       window.removeEventListener('mouseover', handleMouseOver);
     };
-  }, [isVisible]);
+  }, [isVisible, isTouch]);
 
   if (isTouch || !isVisible) return null;
 

@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { PROJECTS } from '@/data/projects';
-import { ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -63,7 +63,7 @@ export const StorytellingShowcase: React.FC = () => {
 
         {/* Featured Editorial Project Cards 3 Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredProjects.map((project, idx) => (
+          {featuredProjects.map((project) => (
             <div
               key={project.id}
               className="project-story-card glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 relative overflow-hidden group flex flex-col justify-between"
