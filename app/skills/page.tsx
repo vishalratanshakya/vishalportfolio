@@ -72,30 +72,30 @@ const CATEGORY_STYLES: Record<
 
 export default function SkillsPage() {
   return (
-    <div className="pt-32 pb-24 relative bg-[#060709] bg-noise min-h-screen">
+    <div className="pt-28 sm:pt-32 pb-24 relative bg-[#060709] bg-noise min-h-screen overflow-x-hidden">
       {/* Background Lighting */}
-      <div className="absolute top-20 left-1/3 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[180px] pointer-events-none" />
-      <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[180px] pointer-events-none" />
+      <div className="absolute top-20 left-1/3 w-[600px] h-[600px] max-w-full bg-blue-600/10 rounded-full blur-[180px] pointer-events-none" />
+      <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] max-w-full bg-purple-600/10 rounded-full blur-[180px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Title */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-12 sm:mb-16">
           <div className="flex items-center gap-2 mb-3">
             <span className="w-6 h-[2px] bg-sky-400" />
             <span className="text-xs font-mono tracking-widest text-sky-400 uppercase font-semibold">
               TECHNICAL CAPABILITIES
             </span>
           </div>
-          <h1 className="text-4xl sm:text-6xl font-display font-extrabold text-white tracking-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight">
             Skills <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400">&</span> Tech Matrix
           </h1>
-          <p className="text-zinc-400 text-lg sm:text-xl font-light mt-4 leading-relaxed">
+          <p className="text-zinc-400 text-base sm:text-xl font-light mt-4 leading-relaxed">
             A comprehensive breakdown of programming languages, frameworks, cloud databases, payment gateways, and software engineering methodologies I utilize.
           </p>
         </div>
 
         {/* Skill Matrix Line by Line Stack */}
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-8 sm:gap-12">
           {SKILL_CATEGORIES.map((category, idx) => {
             const style = CATEGORY_STYLES[category.title] || CATEGORY_STYLES['Languages'];
             const number = `0${idx + 1}`;
@@ -103,31 +103,31 @@ export default function SkillsPage() {
             return (
               <div
                 key={category.title}
-                className={`relative rounded-3xl p-8 sm:p-10 bg-gradient-to-r ${style.gradient} border ${style.border} ${style.hoverBorder} transition-all duration-500 shadow-2xl flex flex-col justify-between group overflow-hidden`}
+                className={`relative rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 bg-gradient-to-r ${style.gradient} border ${style.border} ${style.hoverBorder} transition-all duration-500 shadow-2xl flex flex-col justify-between group overflow-hidden`}
               >
                 <div className={`absolute top-0 right-0 w-80 h-80 ${style.glow} rounded-full blur-[100px] pointer-events-none`} />
 
                 <div>
                   {/* Category Header Bar */}
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 border-b border-white/10 pb-6">
-                    <div className="flex items-center gap-4">
-                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${style.badgeBg} p-[1px] shadow-lg shrink-0`}>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 sm:mb-8 border-b border-white/10 pb-5 sm:pb-6">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${style.badgeBg} p-[1px] shadow-lg shrink-0`}>
                         <div className="w-full h-full bg-[#0d111a] rounded-[15px] flex items-center justify-center">
                           {style.icon}
                         </div>
                       </div>
-                      <div>
+                      <div className="min-w-0">
                         <span className={`text-xs font-mono ${style.textColor} font-semibold uppercase tracking-wider block`}>
                           CATEGORY {number}
                         </span>
-                        <h2 className="text-2xl sm:text-4xl font-display font-bold text-white group-hover:text-white transition-colors">
+                        <h2 className="text-xl sm:text-3xl lg:text-4xl font-display font-bold text-white group-hover:text-white transition-colors break-words">
                           {category.title}
                         </h2>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-3">
-                      <span className="text-xs font-mono text-zinc-400 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">
+                      <span className="text-xs font-mono text-zinc-400 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full shrink-0">
                         {category.skills.length} core technologies
                       </span>
                     </div>

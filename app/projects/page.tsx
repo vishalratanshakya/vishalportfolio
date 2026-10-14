@@ -13,30 +13,30 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="pt-32 pb-24 relative bg-noise">
+    <div className="pt-28 sm:pt-32 pb-24 relative bg-noise overflow-x-hidden">
       {/* Ambient Lighting */}
-      <div className="absolute top-20 left-1/3 w-[600px] h-[600px] bg-sky-500/10 rounded-full blur-[180px] pointer-events-none" />
+      <div className="absolute top-20 left-1/3 w-[600px] h-[600px] max-w-full bg-sky-500/10 rounded-full blur-[180px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-12 sm:mb-16">
           <span className="text-xs font-mono tracking-widest text-sky-400 uppercase">
             Portfolio Showcase ({PROJECTS.length} Case Studies)
           </span>
-          <h1 className="text-4xl sm:text-6xl font-display font-extrabold text-white tracking-tight mt-3">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight mt-3">
             Featured Projects
           </h1>
-          <p className="text-zinc-400 text-lg sm:text-xl font-light mt-4 leading-relaxed">
+          <p className="text-zinc-400 text-base sm:text-xl font-light mt-4 leading-relaxed">
             Detailed case studies of production-grade web applications, Flutter mobile apps, multi-vendor marketplaces, and client platforms.
           </p>
         </div>
 
         {/* 3 Column Grid Project List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {PROJECTS.map((project) => (
             <div
               key={project.id}
-              className="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 hover:border-sky-500/30 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden"
+              className="glass-panel p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 hover:border-sky-500/30 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden"
             >
               {/* Glow accent */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/5 rounded-full blur-[80px] pointer-events-none group-hover:bg-sky-500/10 transition-colors" />

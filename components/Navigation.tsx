@@ -43,31 +43,31 @@ export const Navigation: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 w-full max-w-full z-50 transition-all duration-500 ${
           scrolled
-            ? 'py-4 bg-[#08090b]/80 backdrop-blur-xl border-b border-white/[0.08] shadow-2xl shadow-black/40'
-            : 'py-6 bg-transparent'
+            ? 'py-3 sm:py-4 bg-[#08090b]/85 backdrop-blur-xl border-b border-white/[0.08] shadow-2xl shadow-black/40'
+            : 'py-4 sm:py-6 bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3">
           {/* Logo Identity */}
           <Link
             href="/"
             onClick={() => setMobileMenuOpen(false)}
-            className="group flex items-center gap-2.5 sm:gap-3 tracking-tight font-display text-xl font-bold text-white relative z-50"
+            className="group flex items-center gap-2 sm:gap-3 tracking-tight font-display text-xl font-bold text-white relative z-50 shrink min-w-0"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-purple-500 p-[1px] shadow-lg shadow-sky-500/10 group-hover:shadow-sky-500/30 transition-all duration-300">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-purple-500 p-[1px] shadow-lg shadow-sky-500/10 group-hover:shadow-sky-500/30 transition-all duration-300 shrink-0">
               <div className="w-full h-full bg-[#08090b] rounded-[11px] flex items-center justify-center group-hover:bg-transparent transition-colors duration-300">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-300 font-mono text-sm font-black group-hover:text-white transition-colors">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-300 font-mono text-xs sm:text-sm font-black group-hover:text-white transition-colors">
                   VR
                 </span>
               </div>
             </div>
-            <div className="flex flex-col">
-              <span className="text-sm font-semibold tracking-wide text-zinc-100 group-hover:text-sky-400 transition-colors">
+            <div className="flex flex-col min-w-0">
+              <span className="text-xs sm:text-sm font-semibold tracking-wide text-zinc-100 group-hover:text-sky-400 transition-colors truncate">
                 Vishal Ratan Shakya
               </span>
-              <span className="text-[10px] font-mono tracking-widest text-zinc-500 uppercase">
+              <span className="text-[9px] sm:text-[10px] font-mono tracking-widest text-zinc-500 uppercase truncate">
                 Full Stack Developer
               </span>
             </div>
@@ -99,11 +99,11 @@ export const Navigation: React.FC = () => {
           </nav>
 
           {/* Resume Action & Mobile Toggle */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             <a
               href="/resume/vishalratan-cv.pdf"
               download="vishalratan-cv.pdf"
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-mono tracking-wider uppercase bg-white/5 hover:bg-sky-500 hover:text-black border border-white/10 hover:border-sky-400 text-zinc-200 transition-all duration-300 shadow-md group"
+              className="hidden sm:inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs font-mono tracking-wider uppercase bg-white/5 hover:bg-sky-500 hover:text-black border border-white/10 hover:border-sky-400 text-zinc-200 transition-all duration-300 shadow-md group"
             >
               <span>Resume</span>
               <Download className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -111,7 +111,7 @@ export const Navigation: React.FC = () => {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2.5 rounded-full glass-panel border border-white/10 text-zinc-300 hover:text-white transition-colors relative z-50"
+              className="md:hidden p-2 sm:p-2.5 rounded-full glass-panel border border-white/10 text-zinc-300 hover:text-white transition-colors relative z-50 shrink-0"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5 text-sky-400" /> : <Menu className="w-5 h-5" />}

@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 
 export default function ExperiencePage() {
   return (
-    <div className="pt-32 pb-24 relative bg-noise">
+    <div className="pt-28 sm:pt-32 pb-24 relative bg-noise overflow-x-hidden">
       {/* Background Lighting */}
-      <div className="absolute top-20 right-1/4 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-20 right-1/4 w-[500px] h-[500px] max-w-full bg-sky-500/10 rounded-full blur-[160px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Title */}
         <div className="max-w-3xl mb-16">
           <span className="text-xs font-mono tracking-widest text-sky-400 uppercase">

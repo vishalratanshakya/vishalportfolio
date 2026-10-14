@@ -210,11 +210,11 @@ export const CapabilitiesGrid: React.FC = () => {
                   <h3 className="text-2xl font-display font-bold text-white group-hover:text-teal-300 transition-colors">
                     Database &amp; Tools
                   </h3>
-                  <span className="text-xs font-mono text-zinc-400">4 core technologies</span>
+                  <span className="text-xs font-mono text-zinc-400">5 core technologies</span>
                 </div>
               </div>
 
-              {/* Badges Grid (2x2 matching other cards) */}
+              {/* Badges Grid (5 items matching Card 01 pattern with col-span-2) */}
               <div className="grid grid-cols-2 gap-3 mt-8">
                 {/* MongoDB */}
                 <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#112028]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
@@ -222,6 +222,17 @@ export const CapabilitiesGrid: React.FC = () => {
                     🍃
                   </div>
                   <span className="text-xs font-bold text-white truncate">MongoDB</span>
+                </div>
+
+                {/* SQL */}
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#112028]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
+                  <div className="w-8 h-8 rounded-xl bg-cyan-500/20 text-cyan-400 font-extrabold text-xs flex items-center justify-center shrink-0">
+                    SQL
+                  </div>
+                  <div className="min-w-0">
+                    <span className="text-xs font-bold text-white block leading-tight truncate">SQL</span>
+                    <span className="text-[10px] font-mono text-zinc-400 block leading-tight">(PostgreSQL / MySQL)</span>
+                  </div>
                 </div>
 
                 {/* Firebase */}
@@ -232,20 +243,20 @@ export const CapabilitiesGrid: React.FC = () => {
                   <span className="text-xs font-bold text-white truncate">Firebase</span>
                 </div>
 
-                {/* Git & GitHub */}
-                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#112028]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
-                  <div className="w-8 h-8 rounded-xl bg-orange-500/20 text-orange-400 font-extrabold text-xs flex items-center justify-center shrink-0">
-                    Git
-                  </div>
-                  <span className="text-xs font-bold text-white truncate">Git &amp; GitHub</span>
-                </div>
-
                 {/* Postman */}
                 <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#112028]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-orange-600/20 text-orange-300 font-extrabold text-xs flex items-center justify-center shrink-0">
                     PM
                   </div>
                   <span className="text-xs font-bold text-white truncate">Postman</span>
+                </div>
+
+                {/* Git & GitHub */}
+                <div className="col-span-2 p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#112028]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
+                  <div className="w-8 h-8 rounded-xl bg-orange-500/20 text-orange-400 font-extrabold text-xs flex items-center justify-center shrink-0">
+                    Git
+                  </div>
+                  <span className="text-xs font-bold text-white truncate">Git &amp; GitHub</span>
                 </div>
               </div>
             </div>
