@@ -15,7 +15,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     id: 'meganods',
     company: 'Meganods IT Solutions',
     role: 'Full Stack Developer',
-    period: 'Apr 2026 – Sep 2026',
+    period: 'April 2026 – September 2026',
     location: 'Gaur City Center, Noida, India',
     type: 'Full-time',
     summary:
@@ -25,7 +25,8 @@ export const EXPERIENCES: ExperienceItem[] = [
       'Worked on frontend components, page layouts, reusable UI elements, and user interactions.',
       'Contributed to backend functionality and API integration using Node.js and Express.js.',
       'Worked with MongoDB and Firebase for application data and related backend services where applicable.',
-      'Used Tailwind CSS to build consistent, responsive user interfaces and Postman to test API endpoints.',
+      'Used Tailwind CSS to build consistent, responsive user interfaces.',
+      'Used Postman to test API endpoints and troubleshoot integration issues.',
       'Collaborated on web and mobile application features, including Flutter-based development where applicable.'
     ],
     skills: ['React.js', 'Next.js', 'Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Tailwind CSS', 'Postman', 'Agile']
@@ -34,15 +35,15 @@ export const EXPERIENCES: ExperienceItem[] = [
     id: 'tradesfolks',
     company: 'TradesFolks Pvt. Ltd.',
     role: 'Web Developer Trainee',
-    period: 'Jan 2025 – Apr 2025',
+    period: 'January 2025 – April 2025',
     location: 'Noida, India',
     type: 'Traineership',
     summary:
-      'Gained practical experience in web development through hands-on tasks, developing responsive website layouts, and learning structured development workflows.',
+      'Gained practical web development experience through hands-on tasks involving responsive interfaces, frontend functionality, debugging, and maintaining website components.',
     responsibilities: [
-      'Gained practical experience in web development through hands-on tasks and practical feature implementations.',
+      'Gained practical experience in web development through hands-on tasks.',
       'Worked on website layouts and responsive user interface components using HTML, CSS, JavaScript, and React.',
-      'Practiced implementing website functionality and debugging common frontend and cross-browser issues.',
+      'Practiced implementing website functionality and debugging common frontend issues.',
       'Built practical experience with code organization, version control, and maintaining website components.'
     ],
     skills: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'REST APIs', 'Git', 'Agile Workflows']
@@ -78,15 +79,15 @@ export const EDUCATIONS: EducationItem[] = [
   {
     id: 'class12',
     institution: 'National Inter College',
-    degree: 'Class 12th — Intermediate',
+    degree: 'Class 12th',
     period: '2019',
     location: 'Bhongaon, Mainpuri, Uttar Pradesh, India',
-    details: 'Senior secondary intermediate education.'
+    details: 'Senior secondary intermediate school education.'
   },
   {
     id: 'class10',
     institution: 'National Inter College',
-    degree: 'Class 10th — High School',
+    degree: 'Class 10th',
     period: '2017',
     location: 'Bhongaon, Mainpuri, Uttar Pradesh, India',
     details: 'High school secondary education.'

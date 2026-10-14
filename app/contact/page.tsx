@@ -281,7 +281,7 @@ export default function ContactPage() {
                       </>
                     ) : (
                       <>
-                        <span>Send Message Directly</span>
+                        <span>Send Message</span>
                         <Send className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                       </>
                     )}
