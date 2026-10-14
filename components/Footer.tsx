@@ -128,7 +128,6 @@ export const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 font-mono gap-4">
           <p>© {new Date().getFullYear()} Vishal Ratan Shakya. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <span>Designed & Engineered with Next.js & GSAP</span>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="hover:text-sky-400 transition-colors"
