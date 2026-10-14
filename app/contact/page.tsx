@@ -193,7 +193,7 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="flex items-center justify-between">
                     <h2 className="text-2xl font-display font-bold text-white">Send a Message</h2>
-                    <span className="text-xs font-mono text-zinc-500">Auto-Delivered to Inbox</span>
+
                   </div>
 
                   {errorMessage && (
