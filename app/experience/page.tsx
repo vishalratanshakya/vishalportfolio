@@ -101,8 +101,8 @@ export default function ExperiencePage() {
             <p className="text-zinc-400 text-sm mt-1">Download my formal PDF resume for complete work credentials.</p>
           </div>
           <a
-            href="/resume/Vishal_Ratan_Shakya_Resume.pdf"
-            download="Vishal_Ratan_Shakya_Resume.pdf"
+            href="/resume/vishalratan-cv.pdf"
+            download="vishalratan-cv.pdf"
             className="px-7 py-4 rounded-full bg-sky-400 text-black font-semibold text-sm hover:bg-white transition-all flex items-center gap-2 shrink-0 shadow-lg shadow-sky-500/20"
           >
             <Download className="w-4 h-4" />

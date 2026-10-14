@@ -94,8 +94,8 @@ export const Navigation: React.FC = () => {
           {/* Resume Action & Mobile Toggle */}
           <div className="flex items-center gap-4">
             <a
-              href="/resume/Vishal_Ratan_Shakya_Resume.pdf"
-              download="Vishal_Ratan_Shakya_Resume.pdf"
+              href="/resume/vishalratan-cv.pdf"
+              download="vishalratan-cv.pdf"
               className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-mono tracking-wider uppercase bg-white/5 hover:bg-sky-500 hover:text-black border border-white/10 hover:border-sky-400 text-zinc-200 transition-all duration-300 shadow-md group"
             >
               <span>Resume</span>
@@ -155,8 +155,8 @@ export const Navigation: React.FC = () => {
 
             <div className="flex flex-col gap-4 max-w-md mx-auto w-full pt-8 border-t border-white/10">
               <a
-                href="/resume/Vishal_Ratan_Shakya_Resume.pdf"
-                download="Vishal_Ratan_Shakya_Resume.pdf"
+                href="/resume/vishalratan-cv.pdf"
+                download="vishalratan-cv.pdf"
                 className="w-full flex items-center justify-center gap-3 py-3.5 rounded-xl bg-sky-500 text-black font-semibold text-sm shadow-lg shadow-sky-500/20 active:scale-95 transition-transform"
               >
                 <span>Download Resume (PDF)</span>

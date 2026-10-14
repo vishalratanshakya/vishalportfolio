@@ -93,8 +93,8 @@ export const Hero: React.FC = () => {
               </Link>
 
               <a
-                href="/resume/Vishal_Ratan_Shakya_Resume.pdf"
-                download="Vishal_Ratan_Shakya_Resume.pdf"
+                href="/resume/vishalratan-cv.pdf"
+                download="vishalratan-cv.pdf"
                 className="px-7 py-4 rounded-full bg-white/5 border border-white/10 text-zinc-300 font-mono text-xs uppercase tracking-wider hover:text-white hover:border-sky-400/50 transition-all flex items-center gap-2"
               >
                 <span>Resume</span>

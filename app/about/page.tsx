@@ -87,8 +87,8 @@ export default function AboutPage() {
 
               <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-4">
                 <a
-                  href="/resume/Vishal_Ratan_Shakya_Resume.pdf"
-                  download="Vishal_Ratan_Shakya_Resume.pdf"
+                  href="/resume/vishalratan-cv.pdf"
+                  download="vishalratan-cv.pdf"
                   className="px-6 py-3 rounded-full bg-sky-400 text-black font-semibold text-sm hover:bg-white transition-all flex items-center gap-2"
                 >
                   <Download className="w-4 h-4" />
