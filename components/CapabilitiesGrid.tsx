@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Code2, Layers, Cloud, Database } from 'lucide-react';
+import { ArrowRight, Code2, Layers, Cloud } from 'lucide-react';
 
 export const CapabilitiesGrid: React.FC = () => {
   return (
@@ -193,8 +193,8 @@ export const CapabilitiesGrid: React.FC = () => {
             </div>
           </div>
 
-          {/* Card 03: Database & Cloud Services */}
-          <div className="relative rounded-3xl p-7 bg-gradient-to-b from-[#0f1d24] to-[#091117] border border-teal-500/30 hover:border-teal-400/60 transition-all duration-500 shadow-2xl flex flex-col justify-between group overflow-hidden">
+          {/* Card 03: Database & Developer Tools */}
+          <div className="relative rounded-3xl p-6 sm:p-7 bg-gradient-to-b from-[#0f1d24] to-[#091117] border border-teal-500/30 hover:border-teal-400/60 transition-all duration-500 shadow-2xl flex flex-col justify-between group overflow-hidden">
             <div className="absolute top-0 right-0 w-48 h-48 bg-teal-500/10 rounded-full blur-[70px] pointer-events-none" />
 
             <div>
@@ -208,36 +208,44 @@ export const CapabilitiesGrid: React.FC = () => {
                 <div>
                   <span className="text-xs font-mono text-teal-400 font-semibold uppercase tracking-wider block">03</span>
                   <h3 className="text-2xl font-display font-bold text-white group-hover:text-teal-300 transition-colors">
-                    Database & Cloud Services
+                    Database &amp; Tools
                   </h3>
-                  <span className="text-xs font-mono text-zinc-400">3 core technologies</span>
+                  <span className="text-xs font-mono text-zinc-400">4 core technologies</span>
                 </div>
               </div>
 
-              {/* Badges Grid */}
-              <div className="flex flex-col gap-3 mt-8">
+              {/* Badges Grid (2x2 matching other cards) */}
+              <div className="grid grid-cols-2 gap-3 mt-8">
                 {/* MongoDB */}
-                <div className="p-3.5 rounded-2xl bg-[#112028]/90 border border-white/10 flex items-center gap-3">
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#112028]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 text-base flex items-center justify-center shrink-0">
                     🍃
                   </div>
-                  <span className="text-xs font-bold text-white">MongoDB</span>
+                  <span className="text-xs font-bold text-white truncate">MongoDB</span>
                 </div>
 
                 {/* Firebase */}
-                <div className="p-3.5 rounded-2xl bg-[#112028]/90 border border-white/10 flex items-center gap-3">
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#112028]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
                   <div className="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 text-base flex items-center justify-center shrink-0">
                     🔥
                   </div>
-                  <span className="text-xs font-bold text-white">Firebase</span>
+                  <span className="text-xs font-bold text-white truncate">Firebase</span>
                 </div>
 
-                {/* SQL / Relational DBs */}
-                <div className="p-3.5 rounded-2xl bg-[#112028]/90 border border-white/10 flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
-                    <Database className="w-4 h-4" />
+                {/* Git & GitHub */}
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#112028]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
+                  <div className="w-8 h-8 rounded-xl bg-orange-500/20 text-orange-400 font-extrabold text-xs flex items-center justify-center shrink-0">
+                    Git
                   </div>
-                  <span className="text-xs font-bold text-white">SQL / Relational DBs</span>
+                  <span className="text-xs font-bold text-white truncate">Git &amp; GitHub</span>
+                </div>
+
+                {/* Postman */}
+                <div className="p-3 sm:p-3.5 min-h-[58px] rounded-2xl bg-[#112028]/90 border border-white/10 flex items-center gap-2.5 sm:gap-3 overflow-hidden">
+                  <div className="w-8 h-8 rounded-xl bg-orange-600/20 text-orange-300 font-extrabold text-xs flex items-center justify-center shrink-0">
+                    PM
+                  </div>
+                  <span className="text-xs font-bold text-white truncate">Postman</span>
                 </div>
               </div>
             </div>

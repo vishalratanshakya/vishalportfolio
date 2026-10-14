@@ -38,28 +38,28 @@ export const Hero: React.FC = () => {
       {/* Grid Pattern Lines */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 w-full my-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Hero Content */}
           <div className="lg:col-span-7 flex flex-col items-start">
-            {/* Status Pill Badge */}
+            {/* Status Pill Badge with Location */}
             <div
               ref={badgeRef}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-sky-400 mb-8 backdrop-blur-md"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-sky-400 mb-6 sm:mb-8 backdrop-blur-md"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
               </span>
-              <span>Available for Full Stack & Mobile Engineering Roles</span>
+              <span>Available for Full Stack &amp; Mobile Roles • India</span>
             </div>
 
             {/* Editorial Headline */}
             <h1
               ref={headlineRef}
-              className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white tracking-tight leading-[1.08] mb-8"
+              className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white tracking-tight leading-[1.08] mb-6 sm:mb-8"
             >
-              <span className="hero-line block text-zinc-400 font-normal text-2xl sm:text-4xl mb-2 font-mono">
+              <span className="hero-line block text-zinc-400 font-normal text-xl sm:text-3xl mb-2 font-mono">
                 Hello, I am
               </span>
               <span className="hero-line block bg-gradient-to-r from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent">
@@ -71,23 +71,28 @@ export const Hero: React.FC = () => {
             </h1>
 
             {/* Professional Statement */}
-            <p className="text-zinc-300 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-10">
-              &ldquo;I build modern web and mobile applications with clean code, thoughtful interfaces and seamless user experiences.&rdquo;
-            </p>
+            <div className="space-y-3 max-w-xl mb-8 sm:mb-10 text-zinc-300 text-base sm:text-lg font-light leading-relaxed">
+              <p>
+                I build modern web and mobile applications with thoughtful interfaces, reliable functionality, and clean, maintainable code.
+              </p>
+              <p className="text-zinc-400 text-sm sm:text-base">
+                From e-commerce experiences to on-demand service platforms, I enjoy turning ideas into practical digital products using React, Next.js, Node.js, and Flutter.
+              </p>
+            </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-12">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-5 mb-8 sm:mb-12">
               <Link
                 href="/projects"
-                className="px-7 py-4 rounded-full bg-sky-400 text-black font-semibold text-sm hover:bg-white transition-all shadow-xl shadow-sky-500/15 flex items-center gap-2 group"
+                className="px-6 sm:px-7 py-3.5 sm:py-4 rounded-full bg-sky-400 text-black font-semibold text-xs sm:text-sm hover:bg-white transition-all shadow-xl shadow-sky-500/15 flex items-center gap-2 group"
               >
-                <span>View Projects</span>
+                <span>View My Projects</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
 
               <Link
                 href="/about"
-                className="px-7 py-4 rounded-full glass-panel border border-white/15 text-white font-medium text-sm hover:border-sky-400/50 hover:bg-white/10 transition-all flex items-center gap-2"
+                className="px-6 sm:px-7 py-3.5 sm:py-4 rounded-full glass-panel border border-white/15 text-white font-medium text-xs sm:text-sm hover:border-sky-400/50 hover:bg-white/10 transition-all flex items-center gap-2"
               >
                 <span>About Me</span>
               </Link>
@@ -95,7 +100,7 @@ export const Hero: React.FC = () => {
               <a
                 href="/resume/vishalratan-cv.pdf"
                 download="vishalratan-cv.pdf"
-                className="px-7 py-4 rounded-full bg-white/5 border border-white/10 text-zinc-300 font-mono text-xs uppercase tracking-wider hover:text-white hover:border-sky-400/50 transition-all flex items-center gap-2"
+                className="px-5 sm:px-6 py-3.5 sm:py-4 rounded-full bg-white/5 border border-white/10 text-zinc-300 font-mono text-xs uppercase tracking-wider hover:text-white hover:border-sky-400/50 transition-all flex items-center gap-2"
               >
                 <span>Resume</span>
                 <Download className="w-4 h-4 text-sky-400" />
@@ -130,34 +135,34 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Right Hero Portrait Card */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+          <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
             <div
               ref={portraitRef}
-              className="relative w-full max-w-md aspect-[4/5] rounded-3xl p-2 bg-gradient-to-b from-white/15 via-white/5 to-transparent border border-white/15 shadow-2xl shadow-black/80 group"
+              className="relative w-full max-w-[280px] sm:max-w-sm lg:max-w-md aspect-[4/5] rounded-3xl p-2 bg-gradient-to-b from-white/15 via-white/5 to-transparent border border-white/15 shadow-2xl shadow-black/80 group"
             >
               {/* Inner Frame */}
               <div className="relative w-full h-full rounded-[22px] overflow-hidden bg-surface-100">
                 <Image
                   src="/images/profile/vishal-portrait.jpg"
-                  alt="Vishal Ratan Shakya"
+                  alt="Vishal Ratan Shakya — Full Stack Developer"
                   fill
                   priority
                   className="object-cover object-center filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-                  sizes="(max-width: 768px) 100vw, 500px"
+                  sizes="(max-width: 640px) 280px, (max-width: 1024px) 384px, 448px"
                 />
 
-                {/* Gradient Gradient Overlay */}
+                {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#08090b] via-transparent to-transparent opacity-80" />
 
                 {/* Floating Card Info */}
-                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl glass-panel border border-white/10 backdrop-blur-xl">
+                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 p-3.5 sm:p-4 rounded-2xl glass-panel border border-white/10 backdrop-blur-xl">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-xs font-mono text-sky-400 uppercase tracking-wider">Full Stack & Mobile</p>
-                      <p className="text-sm font-display font-semibold text-white mt-0.5">React • Next.js • Node • Flutter</p>
+                      <p className="text-xs font-mono text-sky-400 uppercase tracking-wider">Full Stack Developer</p>
+                      <p className="text-xs sm:text-sm font-display font-semibold text-white mt-0.5">React • Next.js • Node • Flutter</p>
                     </div>
-                    <div className="w-8 h-8 rounded-full bg-sky-400/20 border border-sky-400/40 flex items-center justify-center">
-                      <Sparkles className="w-4 h-4 text-sky-400" />
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-sky-400/20 border border-sky-400/40 flex items-center justify-center shrink-0">
+                      <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-sky-400" />
                     </div>
                   </div>
                 </div>

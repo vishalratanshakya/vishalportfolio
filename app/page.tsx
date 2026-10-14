@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import { Hero } from '@/components/Hero';
-import { StorytellingShowcase } from '@/components/StorytellingShowcase';
 import { CapabilitiesGrid } from '@/components/CapabilitiesGrid';
+import { StorytellingShowcase } from '@/components/StorytellingShowcase';
 import { TimelinePreview } from '@/components/TimelinePreview';
+import { EducationPreview } from '@/components/EducationPreview';
 import { CallToAction } from '@/components/CallToAction';
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Vishal Ratan Shakya — Full Stack Developer Portfolio',
     description:
-      'I build modern web and mobile applications with clean code, thoughtful interfaces and seamless user experiences.',
+      'I build modern web and mobile applications with thoughtful interfaces, reliable functionality, and clean, maintainable code.',
     type: 'website',
   },
 };
@@ -20,10 +21,22 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
+      {/* 1. Hero / Profile Introduction */}
       <Hero />
-      <StorytellingShowcase />
+
+      {/* 2. Technical Skills (Above Projects) */}
       <CapabilitiesGrid />
+
+      {/* 3. Selected Projects (Exactly 3 Featured Projects) */}
+      <StorytellingShowcase />
+
+      {/* 4. Career Journey / Professional Experience */}
       <TimelinePreview />
+
+      {/* 5. Education & Academics */}
+      <EducationPreview />
+
+      {/* 6. Contact CTA */}
       <CallToAction />
     </div>
   );

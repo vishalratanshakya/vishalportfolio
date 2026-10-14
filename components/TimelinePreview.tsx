@@ -2,48 +2,48 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { EXPERIENCES, EDUCATIONS } from '@/data/experience';
-import { GraduationCap, MapPin, Calendar, ArrowUpRight } from 'lucide-react';
+import { EXPERIENCES } from '@/data/experience';
+import { MapPin, Calendar, ArrowUpRight } from 'lucide-react';
 
 export const TimelinePreview: React.FC = () => {
   return (
-    <section className="py-24 relative bg-[#050608] border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+    <section className="py-20 sm:py-28 relative bg-[#050608] border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Section Heading & Intro */}
           <div className="lg:col-span-5 lg:sticky lg:top-32">
             <span className="text-xs font-mono tracking-widest text-sky-400 uppercase">
               Career Journey
             </span>
             <h2 className="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight mt-3">
-              Professional Work & Experience
+              Professional Experience
             </h2>
-            <p className="text-zinc-400 text-sm sm:text-base leading-relaxed mt-6 font-light">
+            <p className="text-zinc-400 text-sm sm:text-base leading-relaxed mt-4 sm:mt-6 font-light">
               Hands-on software development experience across Noida software IT companies, developing React, Next.js, Node.js, and Flutter production systems.
             </p>
 
-            <div className="mt-8">
+            <div className="mt-6 sm:mt-8">
               <Link
                 href="/experience"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-sky-400 hover:text-white transition-colors group"
               >
-                <span>View Full Experience & Timeline</span>
+                <span>View Full Experience &amp; Timeline</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
             </div>
           </div>
 
           {/* Timeline Nodes */}
-          <div className="lg:col-span-7 flex flex-col gap-8">
+          <div className="lg:col-span-7 flex flex-col gap-6 sm:gap-8">
             {EXPERIENCES.map((exp) => (
               <div
                 key={exp.id}
-                className="glass-panel p-8 rounded-2xl border border-white/10 relative hover:border-sky-500/30 transition-colors group"
+                className="glass-panel p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 relative hover:border-sky-500/30 transition-colors group"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 border-b border-white/10 pb-4">
                   <div>
                     <span className="text-xs font-mono text-sky-400 uppercase tracking-wider">{exp.role}</span>
-                    <h3 className="text-xl font-display font-bold text-white group-hover:text-sky-300 transition-colors mt-0.5">
+                    <h3 className="text-xl sm:text-2xl font-display font-bold text-white group-hover:text-sky-300 transition-colors mt-0.5">
                       {exp.company}
                     </h3>
                   </div>
@@ -59,15 +59,15 @@ export const TimelinePreview: React.FC = () => {
                   </div>
                 </div>
 
-                <p className="text-zinc-300 text-sm leading-relaxed mb-6 font-light">
+                <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed mb-6 font-light">
                   {exp.summary}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {exp.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-zinc-400"
+                      className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-zinc-300"
                     >
                       {skill}
                     </span>
@@ -75,45 +75,6 @@ export const TimelinePreview: React.FC = () => {
                 </div>
               </div>
             ))}
-
-            {/* Quick Education Highlights */}
-            <div className="glass-panel p-8 rounded-2xl border border-white/10 mt-2">
-              <div className="flex items-center justify-between gap-3 mb-6 pb-4 border-b border-white/10">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400">
-                    <GraduationCap className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-base font-display font-bold text-white">Education & Academics</h4>
-                    <p className="text-xs font-mono text-zinc-400">Formal Degrees & Schooling History</p>
-                  </div>
-                </div>
-                <Link
-                  href="/experience"
-                  className="text-xs font-mono text-sky-400 hover:text-white transition-colors"
-                >
-                  View All &rarr;
-                </Link>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {EDUCATIONS.map((edu) => (
-                  <div
-                    key={edu.id}
-                    className="p-4 rounded-xl bg-surface-100 border border-white/5 flex flex-col justify-between"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between text-[11px] font-mono text-sky-400 mb-1">
-                        <span>{edu.period}</span>
-                      </div>
-                      <h5 className="text-sm font-display font-bold text-white mb-0.5">{edu.degree}</h5>
-                      <p className="text-xs text-zinc-300 font-medium">{edu.institution}</p>
-                    </div>
-                    <p className="text-[11px] text-zinc-500 mt-2 font-mono">{edu.location}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
