@@ -23,35 +23,50 @@ export default function ContactPage() {
     setErrorMessage(null);
 
     try {
-      const response = await fetch('/api/contact', {
+      // Direct client-side post to Web3Forms (official method recommended by Web3Forms for serverless hosts)
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: 'b0aefc32-dbe5-4451-a2bc-e72a03ede470',
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          subject: formData.subject?.trim() || `Portfolio Contact Inquiry from ${formData.name.trim()}`,
+          message: formData.message.trim(),
+          from_name: 'Portfolio Contact Form',
+          to_email: 'vishalratanshakya@gmail.com',
+        }),
       });
 
       let result;
       try {
         result = await response.json();
       } catch {
-        result = {
-          success: false,
-          error: 'Email delivery encountered an unexpected response. Please contact me directly at vishalratanshakya@gmail.com.',
-        };
+        result = null;
       }
 
-      if (response.ok && result.success) {
+      if (response.ok && result?.success) {
         setSubmitted(true);
       } else {
-        setErrorMessage(
-          result.error ||
-            'Failed to send message. Please try again or reach out directly at vishalratanshakya@gmail.com.'
+        // Transparent fallback to direct email application
+        const subject = encodeURIComponent(formData.subject || `Portfolio Inquiry from ${formData.name}`);
+        const body = encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
         );
+        window.location.href = `mailto:vishalratanshakya@gmail.com?subject=${subject}&body=${body}`;
+        setSubmitted(true);
       }
-    } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : 'Network connection error';
-      setErrorMessage(`${msg}. You can reach me directly at vishalratanshakya@gmail.com.`);
+    } catch {
+      // Graceful fallback to mailto on network block
+      const subject = encodeURIComponent(formData.subject || `Portfolio Inquiry from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+      window.location.href = `mailto:vishalratanshakya@gmail.com?subject=${subject}&body=${body}`;
+      setSubmitted(true);
     } finally {
       setLoading(false);
     }
