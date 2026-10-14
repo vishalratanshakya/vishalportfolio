@@ -14,41 +14,43 @@ export const EXPERIENCES: ExperienceItem[] = [
   {
     id: 'meganods',
     company: 'Meganods IT Solutions',
-    role: 'Fullstack Developer',
+    role: 'Full Stack Developer',
     period: 'Apr 2026 – Sep 2026',
     location: 'Gaur City Center, Noida, India',
     type: 'Full-time',
-    summary: 'Lead developer building scalable full-stack web and mobile applications using modern React, Next.js, Node.js, and Flutter architectures.',
+    summary:
+      'Worked on developing and improving full-stack web and mobile applications using modern JavaScript technologies and Flutter, contributing to frontend interfaces, backend integration, and application functionality.',
     responsibilities: [
-      'Build and maintain full-stack web applications using React.js, Next.js, Node.js and Express.js.',
-      'Develop responsive, accessible user interfaces using Tailwind CSS and modern CSS animation techniques.',
-      'Design, engineer, and integrate high-throughput REST APIs with MongoDB and Firebase backends.',
-      'Fix complex production bugs and continuously optimize frontend and database query performance.',
-      'Perform thorough API validation and test automation using Postman.',
-      'Collaborate actively within Agile sprint workflows, code reviews, and technical discussions.'
+      'Developed and improved responsive web application interfaces using React.js and Next.js.',
+      'Worked on frontend components, page layouts, reusable UI elements, and user interactions.',
+      'Contributed to backend functionality and API integration using Node.js and Express.js.',
+      'Worked with MongoDB and Firebase for application data and related backend services where applicable.',
+      'Used Tailwind CSS to build consistent, responsive user interfaces and Postman to test API endpoints.',
+      'Collaborated on web and mobile application features, including Flutter-based development where applicable.'
     ],
     skills: ['React.js', 'Next.js', 'Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Tailwind CSS', 'Postman', 'Agile']
   },
   {
     id: 'tradesfolks',
     company: 'TradesFolks Pvt. Ltd.',
-    role: 'Trainee Developer',
+    role: 'Web Developer Trainee',
     period: 'Jan 2025 – Apr 2025',
     location: 'Noida, India',
     type: 'Traineership',
-    summary: 'Frontend and web app developer intern crafting responsive user interfaces and integrating backend API endpoints.',
+    summary:
+      'Gained practical experience in web development through hands-on tasks, developing responsive website layouts, and learning structured development workflows.',
     responsibilities: [
-      'Developed responsive, accessible web pages using HTML, CSS, JavaScript, and React.js.',
-      'Integrated RESTful backend APIs and managed client-side application state.',
-      'Debugged frontend layout bugs and cross-browser rendering inconsistencies.',
-      'Followed Agile software development workflows and git version control protocols.',
-      'Collaborated with senior engineers on internal enterprise web application modules.'
+      'Gained practical experience in web development through hands-on tasks and practical feature implementations.',
+      'Worked on website layouts and responsive user interface components using HTML, CSS, JavaScript, and React.',
+      'Practiced implementing website functionality and debugging common frontend and cross-browser issues.',
+      'Built practical experience with code organization, version control, and maintaining website components.'
     ],
     skills: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'REST APIs', 'Git', 'Agile Workflows']
   }
 ];
 
 export interface EducationItem {
+  id: string;
   institution: string;
   degree: string;
   period: string;
@@ -58,18 +60,36 @@ export interface EducationItem {
 
 export const EDUCATIONS: EducationItem[] = [
   {
+    id: 'btech',
     institution: 'ABES Institute of Technology',
     degree: 'B.Tech in Computer Science (AI Specialization)',
     period: '2022 – 2025',
-    location: 'Ghaziabad, India',
+    location: 'Ghaziabad, Uttar Pradesh, India',
     details: 'Focus on Data Structures, Algorithms, Software Engineering, Artificial Intelligence, and Web Technologies.'
   },
   {
+    id: 'bsc',
     institution: 'Dr. Bhimrao Ambedkar University',
-    degree: 'Bachelor of Science (PCM)',
+    degree: 'B.Sc. in Physics, Chemistry and Mathematics (PCM)',
     period: '2019 – 2022',
-    location: 'Agra, India',
+    location: 'Agra, Uttar Pradesh, India',
     details: 'Core foundation in Physics, Chemistry, and Mathematics.'
+  },
+  {
+    id: 'class12',
+    institution: 'National Inter College',
+    degree: 'Class 12th — Intermediate',
+    period: '2019',
+    location: 'Bhongaon, Mainpuri, Uttar Pradesh, India',
+    details: 'Senior secondary intermediate education.'
+  },
+  {
+    id: 'class10',
+    institution: 'National Inter College',
+    degree: 'Class 10th — High School',
+    period: '2017',
+    location: 'Bhongaon, Mainpuri, Uttar Pradesh, India',
+    details: 'High school secondary education.'
   }
 ];
 

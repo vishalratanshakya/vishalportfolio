@@ -139,7 +139,7 @@ export default function AboutPage() {
 
               <div className="space-y-6">
                 {EDUCATIONS.map((edu) => (
-                  <div key={edu.institution} className="p-5 rounded-2xl bg-surface-100 border border-white/5">
+                  <div key={edu.id} className="p-5 rounded-2xl bg-surface-100 border border-white/5">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                       <h3 className="text-base font-display font-bold text-white">{edu.institution}</h3>
                       <span className="text-xs font-mono text-sky-400">{edu.period}</span>

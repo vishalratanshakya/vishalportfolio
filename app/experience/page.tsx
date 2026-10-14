@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { EXPERIENCES } from '@/data/experience';
-import { Calendar, CheckCircle2, Download } from 'lucide-react';
+import { EXPERIENCES, EDUCATIONS } from '@/data/experience';
+import { Calendar, CheckCircle2, Download, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Work Experience & History — Vishal Ratan Shakya',
@@ -60,10 +60,15 @@ export default function ExperiencePage() {
                 </div>
               </div>
 
+              {/* Role Summary */}
+              <p className="mt-6 text-base text-zinc-300 font-light leading-relaxed">
+                {exp.summary}
+              </p>
+
               {/* Responsibilities list */}
               <div className="mt-8">
                 <h3 className="text-xs font-mono text-zinc-400 uppercase tracking-widest mb-4">
-                  Key Responsibilities & Achievements
+                  Key Responsibilities & Scope
                 </h3>
 
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -92,6 +97,54 @@ export default function ExperiencePage() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Education Section */}
+        <div className="mb-24">
+          <div className="max-w-3xl mb-12">
+            <span className="text-xs font-mono tracking-widest text-sky-400 uppercase">
+              Academic Background
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight mt-2">
+              Education & Qualifications
+            </h2>
+            <p className="text-zinc-400 text-base font-light mt-2">
+              Academic foundation across computer science, science, and secondary school education.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {EDUCATIONS.map((edu) => (
+              <div
+                key={edu.id}
+                className="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 hover:border-sky-500/30 transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-sky-400 flex items-center gap-1.5">
+                      <Calendar className="w-3.5 h-3.5" />
+                      {edu.period}
+                    </span>
+                    <span className="flex items-center gap-1 text-xs font-mono text-zinc-500">
+                      <MapPin className="w-3.5 h-3.5 text-zinc-400" />
+                      {edu.location}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl font-display font-bold text-white mb-1">
+                    {edu.degree}
+                  </h3>
+                  <p className="text-sm font-display font-medium text-zinc-300 mb-3">
+                    {edu.institution}
+                  </p>
+                </div>
+
+                <p className="text-xs text-zinc-400 font-light leading-relaxed pt-4 border-t border-white/5">
+                  {edu.details}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Resume Download Callout */}
